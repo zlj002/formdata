@@ -19,39 +19,13 @@
     </section>
 
     <section class="main-content">
-      <p>这是一个简单获取表单数据的插件，它依赖 requireJS ,jquery ，它支持不是 from 的任何对象下包含的所有dom的值
-假如你的html 代码如下</p>
+      <p>这是一个简单获取表单数据的插件，它依赖 requireJS ,jquery ，它支持不是 from 的任何对象下包含的所有dom的值</p>
 
-<p><code>&lt;div id="temp"&gt;
-         &lt;input type="text" name="name"/&gt;&lt;br /&gt;
-         &lt;input type="date" name="brithday" /&gt;&lt;br /&gt;
-         &lt;label&gt;&lt;input type="radio" name="sex" value="1" /&gt;男&lt;/label&gt;
-         &lt;label&gt;&lt;input type="radio" name="sex" value="0" /&gt;女&lt;/label&gt;
-         &lt;br /&gt;
-         &lt;label&gt; &lt;input type="checkbox" name="interest" value="1" /&gt;运动&lt;/label&gt;
-         &lt;label&gt; &lt;input type="checkbox" name="interest" value="2" /&gt;休闲&lt;/label&gt;
-         &lt;br /&gt;
-         &lt;input type="text" name="detail.name"/&gt;
-         &lt;br /&gt;
-         &lt;input type="text" name="a.b.name" /&gt;
-         &lt;br /&gt;
-         &lt;img name="headerImage" src="http://developer.baidu.com/resources/online/common/img/logo.png"/&gt;
-         &lt;br /&gt;
-         &lt;input type="button" id="btnGetData" value="获取数据"/&gt;
-         &lt;input type="button" id="btnInitData" value="赋值" /&gt;
-     &lt;/div&gt;</code></p>
+<p>获取表单数据 
+ form.getData("temp") </p>
 
-<p>获取其中的数据数据</p>
-
-<p><code>$("#btnGetData").on("click", function () {
-            alert(JSON.stringify(form.getData("temp")));
-        });</code></p>
-
-<p>赋值显示
-<code>$("#btnInitData").on("click", function () {
-            var data = { "name": "123", "sex": "0", "interest": "2", "detail": { "name": "test" }, "headerImage": "http://developer.baidu.com/resources/online/errors/img/img_404.png", "a": {"b":"123123"},"brithday":"2015-02-11" };
-            form.initData("temp", data); 
-        });</code></p>
+<p>赋值显示数据<br>
+ form.initData("temp", { "name": "123"  }); </p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/zlj002/formdata">Formdata</a> is maintained by <a href="https://github.com/zlj002">zlj002</a>.</span>
