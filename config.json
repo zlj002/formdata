@@ -1,14 +1,13 @@
 {
   "dist": "dist/",
   "css": {
-
     "src": "src/css/*.css",
-    "dist": "dist/app/css",
-    "rev": "dist/app/rev/css"
+    "dist": "dist/css",
+    "rev": "dist/rev/css"
   },
   "js": {
     "src": "src/scripts/**/*.js",
-    "dist": "dist/app/js",
-    "rev": "dist/app/rev/js"
+    "dist": "dist/scripts",
+    "rev": "dist/rev/scripts"
   }
 }

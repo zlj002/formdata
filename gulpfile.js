@@ -28,14 +28,23 @@ gulp.task('css', function () {
         .pipe(gulp.dest(config.css.rev))
 });
 gulp.task('js', function () {
-    return gulp.src(config.js.src)
+    gulp.src(['src/require.js'])
+       .pipe(gulp.dest('dist'))
+    return gulp.src(['test/main.js','src/*.js'])
+       .pipe(concat('main.js')) 
         .pipe(uglify())
-        //.pipe(rename(function (path) {
+       .pipe(gulp.dest('dist'))   
+       
+
+
+    //return gulp.src(config.js.src)
+    //    .pipe(uglify())
+    //    //.pipe(rename(function (path) {
         //    path.basename += ".min";
         //    path.extname = ".js";
         //}))
         //.pipe(rev()) 
-        .pipe(gulp.dest(config.js.dist))
+        //.pipe(gulp.dest(config.js.dist))
         //.pipe(rev.manifest())
         //.pipe(gulp.dest(config.js.rev))
 });
