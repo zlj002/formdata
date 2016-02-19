@@ -1,5 +1,5 @@
-﻿'use strict';
-//这是master分支
+﻿'use strict'; 
+//分支合并 
 
 (function (win) { 
 
